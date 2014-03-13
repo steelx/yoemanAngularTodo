@@ -1,0 +1,39 @@
+<div class="header">
+  <h3 class="text-muted">yoAngularTodo</h3>
+</div>
+
+
+<div class="container">
+  <h2>My todos</h2>
+
+  <!-- Todos input -->
+  <form role="form" ng-submit="addTodo()">
+    <div class="row">
+      <div class="input-group">
+        <input type="text" ng-model="todo" placeholder="What needs to be done?" class="form-control">
+        <span class="input-group-btn">
+          <input type="submit" class="btn btn-primary" value="Add">
+        </span>
+      </div>
+    </div>
+  </form>
+  <hr>
+
+  <div class="row" ui-sortable>
+
+    <div class="form-group" ng-repeat="todo in awesomeThings">
+      <div class="input-group">
+        <input type="text" ng-model="todo" class="form-control">
+        <span class="input-group-addon btn btn-danger" ng-click="removeTodo($index)">X</span>
+      </div>
+      
+    </div>
+
+  </div>
+
+  
+</div>
+
+<div class="footer">
+  <p>built with ♥ and yeoman &copy; ajinkyaxjs.com</p>
+</div>
